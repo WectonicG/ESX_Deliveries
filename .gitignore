@@ -262,3 +262,7 @@ __pycache__/
 Esx_Deliveries_Client.net.dll
 CitizenFX.Core.Client.xml
 CitizenFX.Core.Client.dll
+
+Esx_Deliveries_Client/Esx_Deliveries_Client.csproj
+
+*.csproj
