@@ -122,8 +122,9 @@ namespace Esx_Deliveries_Client
             dynamic blip = AddBlipForCoord(m_baselocation_coords.X, m_baselocation_coords.Y, m_baselocation_coords.Z);
             SetBlipSprite(blip, 85);
             SetBlipColour(blip, 5);
+            SetBlipAsShortRange(blip, true);
             BeginTextCommandSetBlipName("STRING");
-            AddTextComponentString("Deliveries Hub");
+            AddTextComponentString("Lieferdienst");
             EndTextCommandSetBlipName(blip);
 
             DeliveryData.DecorCode                      = GetConvarInt("esx_deliveries_decorcode", 1450);
@@ -440,6 +441,7 @@ namespace Esx_Deliveries_Client
 
                 DecorSetInt(m_delivery_vehicle.Handle, "Delivery.Rental", DeliveryData.DecorCode);
                 SetVehicleOnGroundProperly(m_delivery_vehicle.Handle);
+                Exports["LegacyFuel"].SetFuel(m_delivery_vehicle.Handle, 100);
 
                 if (aDeliveryType == DeliveryType.Scooter)
                 {

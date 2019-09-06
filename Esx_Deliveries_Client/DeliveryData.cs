@@ -32,18 +32,18 @@ namespace Esx_Deliveries_Client
 
         public static Dictionary<string, string> _U = new Dictionary<string, string>
         {
-            ["DELIVERY_NOT_AVAILABLE"] = "This mode is ~r~not available~w~ yet. Please use the ~g~bike~w~ or ~g~van~w~.",
-            ["START_DELIVERY"] = "Press ~INPUT_CONTEXT~ to start a delivery route. You will need to place a safe deposit of ~g~$",
-            ["SAFE_DEPOSIT_RECEIVED"] = "Vehicle's safe deposit was removed from your bank account.",
-            ["SAFE_DEPOSIT_RETURNED"] = "Your vehicle's safe deposit was returned to your bank account.",
-            ["SAFE_DEPOSIT_WITHHELD"] = "Delivery ~r~Failed~w~. Your vehicle's safe deposit has been ~r~withheld~w~ by the bank.",
-            ["DELIVERY_POINT_REWARD"] = "Delivery complete. Your received ~g~$",
-            ["GET_BACK_IN_VEHICLE"] = "Get into your vehicle!",
-            ["REMOVE_GOODS"] = "Press ~INPUT_CONTEXT~ to remove ~y~delivery goods~w~.",
-            ["DELIVER_INSIDE_SHOP"] = "Get to the shop and deliver the ~y~goods~w~.",
-            ["GET_BACK_TO_DELIVERYHUB"] = "Get back to delivery hub to return the vehicle.",
-            ["DELIVERY_VEHICLE_RETURNED"] = "Your delivery vehicle has been returned.",
-            ["END_DELIVERY"] = "Press ~INPUT_CONTEXT~ to end delivery. Make sure you are inside your vehicle so you can get your deposit back.",
+            ["DELIVERY_NOT_AVAILABLE"] = "Diese Tour ist derzeit ~r~nicht verfügbar~w~. Bitte nutze das ~g~Moped~w~ oder den ~g~Van~w~.",
+            ["START_DELIVERY"] = "Drücke ~INPUT_CONTEXT~ um eine Tour zu starten. Sicherheitsleistung: ~g~$",
+            ["SAFE_DEPOSIT_RECEIVED"] = "Die Sicherheitsleistung wurde von deinem Konto eingezogen.",
+            ["SAFE_DEPOSIT_RETURNED"] = "Die Sicherheitsleistung wurde deinem Konto wieder gutgeschrieben.",
+            ["SAFE_DEPOSIT_WITHHELD"] = "Lieferung ~r~fehlgeschlagen~w~. Die Sicherheitsleistung für das Fahrzeug wird von der Bank ~r~einbehalten~w~.",
+            ["DELIVERY_POINT_REWARD"] = "Lieferung abgeschlossen. Du bekommst ~g~$",
+            ["GET_BACK_IN_VEHICLE"] = "Steig in dein Fahrzeug!",
+            ["REMOVE_GOODS"] = "Drücke ~INPUT_CONTEXT~ um die ~y~Lieferung~w~ zu entnehmen.",
+            ["DELIVER_INSIDE_SHOP"] = "Gehe zum Laden und stelle die ~y~Lieferung~w~ zu.",
+            ["GET_BACK_TO_DELIVERYHUB"] = "Fahr zurück zur Zustellbasis und bringe das Fahrzeug zurück.",
+            ["DELIVERY_VEHICLE_RETURNED"] = "Dein Lieferfahrzeug wurde zurückgebracht.",
+            ["END_DELIVERY"] = "Drücke ~INPUT_CONTEXT~ um die Tour zu beenden. Stelle sicher, dass du in einem Fahrzeug sitzt, um deine Sicherheitsleistung zurück zu erhalten.",
         };
 
         public static List<Vector4> ParkingSpawns = new List<Vector4>
