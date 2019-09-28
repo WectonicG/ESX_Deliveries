@@ -441,6 +441,12 @@ namespace Esx_Deliveries_Client
 
                 DecorSetInt(m_delivery_vehicle.Handle, "Delivery.Rental", DeliveryData.DecorCode);
                 SetVehicleOnGroundProperly(m_delivery_vehicle.Handle);
+
+                int rndNr = rnd.Next(1000, 9999);
+                var plate = "DEL " + rndNr;
+                SetVehicleNumberPlateText(m_delivery_vehicle.Handle, plate);
+                TriggerServerEvent("ft_carKeys:createKey", "Jobs", plate);
+
                 Exports["LegacyFuel"].SetFuel(m_delivery_vehicle.Handle, 100);
 
                 if (aDeliveryType == DeliveryType.Scooter)
@@ -560,6 +566,8 @@ namespace Esx_Deliveries_Client
         }
         private void ReturnVehicle(DeliveryType aDeliveryType)
         {
+            var plate = GetVehicleNumberPlateText(m_delivery_vehicle.Handle);
+            TriggerServerEvent("ft_carKeys:delJobKey", plate);
             SetModelAsNoLongerNeeded((uint)m_delivery_vehicle.Handle);
             m_delivery_vehicle.Delete();
             Screen.ShowNotification(DeliveryData._U["DELIVERY_VEHICLE_RETURNED"]);
