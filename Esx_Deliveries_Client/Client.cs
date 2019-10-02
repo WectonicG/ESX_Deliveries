@@ -132,13 +132,13 @@ namespace Esx_Deliveries_Client
             DeliveryData.DELIVERIES_MIN                 = GetConvarInt("esx_deliveries_min", 5);
             DeliveryData.DELIVERIES_MAX                 = GetConvarInt("esx_deliveries_max", 7);
 
-            DeliveryData.DELIVERIES_REWARD_SCOOTER      = GetConvarInt("esx_deliveries_reward_scooter", 750);
-            DeliveryData.DELIVERIES_REWARD_VAN          = GetConvarInt("esx_deliveries_reward_van", 1000);
-            DeliveryData.DELIVERIES_REWARD_TRUCK        = GetConvarInt("esx_deliveries_reward_truck", 1450);
+            DeliveryData.DELIVERIES_REWARD_SCOOTER      = GetConvarInt("esx_deliveries_reward_scooter", 375);
+            DeliveryData.DELIVERIES_REWARD_VAN          = GetConvarInt("esx_deliveries_reward_van", 500);
+            DeliveryData.DELIVERIES_REWARD_TRUCK        = GetConvarInt("esx_deliveries_reward_truck", 725);
 
-            DeliveryData.SAFE_DEPOSIT_SCOOTER           = GetConvarInt("esx_deliveries_safe_deposit_scooter", 4000);
-            DeliveryData.SAFE_DEPOSIT_VAN               = GetConvarInt("esx_deliveries_safe_deposit_van", 6000);
-            DeliveryData.SAFE_DEPOSIT_TRUCK             = GetConvarInt("esx_deliveries_safe_deposit_truck", 8000);
+            DeliveryData.SAFE_DEPOSIT_SCOOTER           = GetConvarInt("esx_deliveries_safe_deposit_scooter", 2000);
+            DeliveryData.SAFE_DEPOSIT_VAN               = GetConvarInt("esx_deliveries_safe_deposit_van", 3000);
+            DeliveryData.SAFE_DEPOSIT_TRUCK             = GetConvarInt("esx_deliveries_safe_deposit_truck", 4000);
 
             Tick += HandleInput;
             Tick += HandleLogic;
