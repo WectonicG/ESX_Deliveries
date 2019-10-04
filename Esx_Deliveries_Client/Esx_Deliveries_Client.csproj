@@ -53,4 +53,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y /d "$(TargetPath)" "D:\FXServer\server-data\resources\[esx]\esx_deliveries"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

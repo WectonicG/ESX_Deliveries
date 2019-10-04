@@ -78,7 +78,7 @@ namespace Esx_Deliveries_Client
             Tuple.Create(   new Vector3(211.33f, -605.63f, 41.42f),     new Vector3(222.32f, -596.71f, 43.87f)),
             Tuple.Create(   new Vector3(126.27f, -555.46f, 42.66f),     new Vector3(168.11f, -567.17f, 43.87f)),
             Tuple.Create(   new Vector3(254.2f, -377.17f, 43.96f),      new Vector3(239.06f, -409.27f, 47.92f)),
-            Tuple.Create(   new Vector3(241.3f, 353.23f, 105.46f),     new Vector3(252.86f, 357.13f, 105.53f)),
+            Tuple.Create(   new Vector3(244.49f, 349.05f, 105.46f),     new Vector3(252.86f, 357.13f, 105.53f)),
             Tuple.Create(   new Vector3(130.77f, -307.27f, 44.58f),     new Vector3(138.67f, -285.45f, 50.45f)),
             Tuple.Create(   new Vector3(54.44f, -280.4f, 46.9f),        new Vector3(61.86f, -260.86f, 52.35f)),
             Tuple.Create(   new Vector3(55.15f, -225.54f, 50.44f),      new Vector3(76.29f, -233.15f, 51.4f)),
