@@ -432,12 +432,14 @@ namespace Esx_Deliveries_Client
 
                 if (aDeliveryType == DeliveryType.Truck)
                 {
+                    TriggerServerEvent("esx_deliveries:start", "deliveries (Truck)");
                     m_delivery_vehicle = await World.CreateVehicle(DeliveryData.MODEL_TRUCK, spawn_location, DeliveryData.ParkingSpawns[rs].W);
                     SetVehicleLivery(m_delivery_vehicle.Handle, 2);
                 }
 
                 if (aDeliveryType == DeliveryType.Van)
                 {
+                    TriggerServerEvent("esx_deliveries:start", "deliveries (Van)");
                     m_delivery_vehicle = await World.CreateVehicle(DeliveryData.MODEL_VAN, spawn_location, DeliveryData.ParkingSpawns[rs].W);
                     SetVehicleExtra(m_delivery_vehicle.Handle, 2, false);
                 }
@@ -454,6 +456,7 @@ namespace Esx_Deliveries_Client
 
                 if (aDeliveryType == DeliveryType.Scooter)
                 {
+                    TriggerServerEvent("esx_deliveries:start", "deliveries (Scooter)");
                     Vector3 spawn_location2 = new Vector3(DeliveryData.ParkingSpawns[rs].X, DeliveryData.ParkingSpawns[rs].Y, DeliveryData.ParkingSpawns[rs].Y);
 
                     Prop bag_ent = await World.CreateProp("prop_med_bag_01", spawn_location2, false, false);
@@ -595,6 +598,15 @@ namespace Esx_Deliveries_Client
                 /* Remove vehicle */
                 m_delivery_vehicle.Delete();
             }
+
+            if (aDeliveryType == DeliveryType.Scooter)
+                TriggerServerEvent("esx_deliveries:stop", "deliveries (Scooter)");
+
+            if (aDeliveryType == DeliveryType.Truck)
+                TriggerServerEvent("esx_deliveries:stop", "deliveries (Truck)");
+
+            if (aDeliveryType == DeliveryType.Van)
+                TriggerServerEvent("esx_deliveries:stop", "deliveries (Van)");
 
             m_delivery_state = DELIVERY_STATE.DELIVERY_INACTIVE;
             m_delivery_vehicle = null;
